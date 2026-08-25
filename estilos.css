@@ -1,0 +1,1919 @@
+/* =====================================================
+   VARIABLES
+===================================================== */
+
+:root {
+
+    --fondo: #f4f7fb;
+
+    --tarjeta: #ffffff;
+
+    --texto: #172033;
+
+    --texto-secundario: #64748b;
+
+    --borde: #e2e8f0;
+
+    --azul: #2563eb;
+
+    --azul-claro: #dbeafe;
+
+    --verde: #16a34a;
+
+    --verde-claro: #dcfce7;
+
+    --naranja: #ea580c;
+
+    --naranja-claro: #ffedd5;
+
+    --morado: #7c3aed;
+
+    --morado-claro: #ede9fe;
+
+    --amarillo-claro: #fef3c7;
+
+    --rojo-claro: #fee2e2;
+
+    --sombra:
+        0 12px 35px
+        rgba(15,23,42,0.08);
+
+}
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+
+    box-sizing: border-box;
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:
+        var(--fondo);
+
+    color:
+        var(--texto);
+
+    transition:
+        background 0.3s,
+        color 0.3s;
+
+}
+
+
+/* =====================================================
+   ENCABEZADO
+===================================================== */
+
+.encabezado {
+
+    background:
+        linear-gradient(
+            135deg,
+            #172554,
+            #2563eb
+        );
+
+    color: white;
+
+    padding:
+        55px
+        max(6%, calc((100% - 1200px) / 2));
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 30px;
+
+}
+
+
+.encabezado-contenido {
+
+    max-width: 800px;
+
+}
+
+
+.etiqueta {
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    opacity: 0.8;
+
+}
+
+
+.encabezado h1 {
+
+    font-size:
+        clamp(40px, 6vw, 65px);
+
+    margin:
+        12px 0
+        18px;
+
+}
+
+
+.encabezado p {
+
+    font-size: 19px;
+
+    line-height: 1.7;
+
+    color: #dbeafe;
+
+}
+
+
+.modo-btn {
+
+    width: 52px;
+
+    height: 52px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,0.15);
+
+    color: white;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+}
+
+
+/* =====================================================
+   MAIN
+===================================================== */
+
+main {
+
+    width:
+        min(1200px, 92%);
+
+    margin:
+        auto;
+
+}
+
+
+/* =====================================================
+   TÍTULOS
+===================================================== */
+
+.titulo-seccion {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin-bottom: 30px;
+
+}
+
+
+.numero-seccion {
+
+    width: 50px;
+
+    height: 50px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 14px;
+
+    background:
+        var(--azul);
+
+    color: white;
+
+    font-weight: bold;
+
+}
+
+
+.titulo-seccion h2 {
+
+    font-size: 32px;
+
+    margin-bottom: 6px;
+
+}
+
+
+.titulo-seccion p {
+
+    color:
+        var(--texto-secundario);
+
+    font-size: 16px;
+
+}
+
+
+/* =====================================================
+   MAPA
+===================================================== */
+
+.mapa {
+
+    padding:
+        70px
+        0
+        35px;
+
+}
+
+
+.mapa-contenedor {
+
+    position: relative;
+
+    height: 850px;
+
+    background:
+        var(--tarjeta);
+
+    border:
+        1px solid var(--borde);
+
+    border-radius: 30px;
+
+    box-shadow:
+        var(--sombra);
+
+    overflow: hidden;
+
+}
+
+
+/* =====================================================
+   NODOS
+===================================================== */
+
+.nodo {
+
+    position: absolute;
+
+    width: 205px;
+
+    min-height: 120px;
+
+    border: none;
+
+    border-radius: 20px;
+
+    padding: 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color:
+        var(--texto);
+
+    cursor: pointer;
+
+    z-index: 10;
+
+    box-shadow:
+        0 8px 25px
+        rgba(15,23,42,0.08);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+
+}
+
+
+.nodo:hover {
+
+    transform:
+        scale(1.06);
+
+    box-shadow:
+        0 14px 30px
+        rgba(15,23,42,0.16);
+
+}
+
+
+/* =====================================================
+   POSICIONES DEL MAPA
+===================================================== */
+
+
+/* MECÁNICA */
+
+.central {
+
+    top: 275px;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    width: 240px;
+
+    min-height: 145px;
+
+    background:
+        var(--azul-claro);
+
+}
+
+
+.central:hover {
+
+    transform:
+        translateX(-50%)
+        scale(1.06);
+
+}
+
+
+/* ESTÁTICA */
+
+.estatica {
+
+    top: 65px;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    background:
+        var(--verde-claro);
+
+}
+
+
+.estatica:hover {
+
+    transform:
+        translateX(-50%)
+        scale(1.06);
+
+}
+
+
+/* DINÁMICA */
+
+.dinamica {
+
+    top: 285px;
+
+    right: 5%;
+
+    background:
+        var(--naranja-claro);
+
+}
+
+
+/* PRINCIPIOS */
+
+.principios {
+
+    top: 505px;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    background:
+        var(--morado-claro);
+
+}
+
+
+.principios:hover {
+
+    transform:
+        translateX(-50%)
+        scale(1.06);
+
+}
+
+
+/* PRIMERA LEY */
+
+.principio1 {
+
+    bottom: 35px;
+
+    left: 4%;
+
+    background:
+        #e0f2fe;
+
+}
+
+
+/* SEGUNDA LEY */
+
+.principio2 {
+
+    bottom: 35px;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    background:
+        var(--amarillo-claro);
+
+}
+
+
+.principio2:hover {
+
+    transform:
+        translateX(-50%)
+        scale(1.06);
+
+}
+
+
+/* TERCERA LEY */
+
+.principio3 {
+
+    bottom: 35px;
+
+    right: 4%;
+
+    background:
+        var(--rojo-claro);
+
+}
+
+
+/* =====================================================
+   TEXTO DE NODOS
+===================================================== */
+
+.nodo .icono {
+
+    font-size: 32px;
+
+}
+
+
+.nodo strong {
+
+    font-size: 18px;
+
+    text-align: center;
+
+}
+
+
+.nodo small {
+
+    font-size: 13px;
+
+    color:
+        var(--texto-secundario);
+
+    text-align: center;
+
+    line-height: 1.4;
+
+}
+
+
+.numero {
+
+    width: 40px;
+
+    height: 40px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: white;
+
+    font-size: 21px;
+
+    font-weight: bold;
+
+}
+
+
+/* =====================================================
+   LÍNEAS DEL MAPA
+===================================================== */
+
+.linea {
+
+    position: absolute;
+
+    background:
+        #cbd5e1;
+
+    z-index: 2;
+
+    border-radius: 20px;
+
+}
+
+
+/* MECÁNICA → ESTÁTICA */
+
+.linea-estatica {
+
+    width: 4px;
+
+    height: 110px;
+
+    top: 175px;
+
+    left: 50%;
+
+}
+
+
+/* MECÁNICA → DINÁMICA */
+
+.linea-dinamica {
+
+    width: 245px;
+
+    height: 4px;
+
+    top: 350px;
+
+    right: 22%;
+
+}
+
+
+/* MECÁNICA → PRINCIPIOS */
+
+.linea-principios {
+
+    width: 4px;
+
+    height: 110px;
+
+    top: 420px;
+
+    left: 50%;
+
+}
+
+
+/*
+   PRINCIPIOS → LEY 1
+
+   La línea diagonal llega hacia
+   el centro de la primera tarjeta.
+*/
+
+.linea-ley1 {
+
+    width: 275px;
+
+    height: 4px;
+
+    top: 650px;
+
+    left: 17%;
+
+    transform:
+        rotate(17deg);
+
+}
+
+
+/*
+   PRINCIPIOS → LEY 2
+*/
+
+.linea-ley2 {
+
+    width: 4px;
+
+    height: 80px;
+
+    top: 625px;
+
+    left: 50%;
+
+}
+
+
+/*
+   PRINCIPIOS → LEY 3
+*/
+
+.linea-ley3 {
+
+    width: 275px;
+
+    height: 4px;
+
+    top: 650px;
+
+    right: 17%;
+
+    transform:
+        rotate(-17deg);
+
+}
+
+
+/* =====================================================
+   INFORMACIÓN
+===================================================== */
+
+.informacion {
+
+    margin:
+        25px
+        0
+        75px;
+
+}
+
+
+.panel {
+
+    background:
+        var(--tarjeta);
+
+    border:
+        1px solid var(--borde);
+
+    border-radius: 28px;
+
+    padding: 45px;
+
+    min-height: 370px;
+
+    box-shadow:
+        var(--sombra);
+
+}
+
+
+.panel-inicial {
+
+    min-height: 280px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+}
+
+
+.panel-icono {
+
+    font-size: 60px;
+
+    margin-bottom: 18px;
+
+}
+
+
+.panel-inicial h2 {
+
+    font-size: 30px;
+
+    margin-bottom: 12px;
+
+}
+
+
+.panel-inicial p {
+
+    font-size: 18px;
+
+    color:
+        var(--texto-secundario);
+
+}
+
+
+/* =====================================================
+   INFORMACIÓN DEL CONCEPTO
+===================================================== */
+
+.info-header {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin-bottom: 30px;
+
+}
+
+
+.info-icono {
+
+    font-size: 55px;
+
+}
+
+
+.info-header h2 {
+
+    font-size: 34px;
+
+}
+
+
+.info-layout {
+
+    display: grid;
+
+    grid-template-columns:
+        0.9fr
+        1.1fr;
+
+    gap: 40px;
+
+}
+
+
+.info-texto {
+
+    font-size: 19px;
+
+    line-height: 1.9;
+
+    color:
+        var(--texto-secundario);
+
+}
+
+
+.info-box {
+
+    margin-top: 25px;
+
+    padding: 22px;
+
+    border-radius: 16px;
+
+    background:
+        var(--fondo);
+
+    border-left:
+        5px solid var(--azul);
+
+}
+
+
+.info-box strong {
+
+    font-size: 17px;
+
+}
+
+
+.info-box p {
+
+    margin-top: 10px;
+
+}
+
+
+/* =====================================================
+   IMÁGENES
+===================================================== */
+
+.imagen-contenedor {
+
+    min-height: 300px;
+
+    border:
+        2px dashed #94a3b8;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f8fafc,
+            #e2e8f0
+        );
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+}
+
+
+.imagen-contenedor img {
+
+    width: 170%;
+
+    height: 500px;
+
+    object-fit: cover;
+
+}
+
+
+.placeholder-imagen {
+
+    text-align: center;
+
+    padding: 30px;
+
+    color:
+        #64748b;
+
+}
+
+
+.icono-imagen {
+
+    font-size: 60px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.placeholder-imagen strong {
+
+    display: block;
+
+    font-size: 18px;
+
+    margin-bottom: 8px;
+
+}
+
+
+.placeholder-imagen small {
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+}
+
+
+/* =====================================================
+   FÓRMULAS
+===================================================== */
+
+.formula-grande {
+
+    font-size: 36px;
+
+    font-weight: bold;
+
+    text-align: center;
+
+    color:
+        var(--azul);
+
+    margin:
+        15px 0;
+
+}
+
+
+/* =====================================================
+   EXPERIMENTOS
+===================================================== */
+
+/*
+   MUY IMPORTANTE:
+
+   Todos los experimentos empiezan ocultos.
+*/
+
+.experimento-seccion {
+
+    display: none;
+
+}
+
+
+/*
+   JavaScript agrega esta clase
+   únicamente al experimento
+   seleccionado.
+*/
+
+.experimento-seccion.activo {
+
+    display: block;
+
+}
+
+
+/* Animación */
+
+.experimento-seccion.activo
+.experimento {
+
+    animation:
+        aparecerExperimento
+        0.4s
+        ease;
+
+}
+
+
+@keyframes aparecerExperimento {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(15px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+.experiencia {
+
+    margin-bottom: 75px;
+
+}
+
+
+.experimento {
+
+    background:
+        var(--tarjeta);
+
+    border:
+        1px solid var(--borde);
+
+    border-radius: 28px;
+
+    padding: 40px;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr;
+
+    gap: 45px;
+
+    align-items: center;
+
+    box-shadow:
+        var(--sombra);
+
+}
+
+
+.experimento-info h3 {
+
+    font-size: 26px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.experimento-info > p {
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    color:
+        var(--texto-secundario);
+
+    margin-bottom: 25px;
+
+}
+
+
+/* =====================================================
+   CONTROLES
+===================================================== */
+
+.control {
+
+    background:
+        var(--fondo);
+
+    border-radius: 16px;
+
+    padding: 20px;
+
+    margin-top: 18px;
+
+}
+
+
+.control-cabecera {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 15px;
+
+}
+
+
+.control-cabecera label {
+
+    font-weight: bold;
+
+}
+
+
+.control-cabecera strong {
+
+    color:
+        var(--azul);
+
+    font-size: 18px;
+
+}
+
+
+.control input {
+
+    width: 100%;
+
+    accent-color:
+        var(--azul);
+
+}
+
+
+/* =====================================================
+   ECUACIONES
+===================================================== */
+
+.ecuacion {
+
+    margin-top: 25px;
+
+    padding: 20px;
+
+    background:
+        var(--azul-claro);
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    font-size: 24px;
+
+    font-weight: bold;
+
+    color:
+        var(--azul);
+
+}
+
+
+.resultado-simple {
+
+    margin-top: 22px;
+
+    padding: 18px;
+
+    background:
+        var(--azul-claro);
+
+    border-radius: 15px;
+
+    font-size: 18px;
+
+}
+
+
+.resultado-simple strong {
+
+    color:
+        var(--azul);
+
+    font-size: 25px;
+
+}
+
+
+/* =====================================================
+   ESCENAS
+===================================================== */
+
+.escena {
+
+    position: relative;
+
+    min-height: 320px;
+
+    border-radius: 22px;
+
+    background:
+        var(--fondo);
+
+    overflow: hidden;
+
+}
+
+
+/* =====================================================
+   ESTÁTICA
+===================================================== */
+
+.equilibrio {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.objeto-estatico {
+
+    font-size: 75px;
+
+    z-index: 5;
+
+}
+
+
+.mesa {
+
+    width: 230px;
+
+    height: 20px;
+
+    background:
+        #64748b;
+
+    border-radius: 10px;
+
+}
+
+
+.fuerza {
+
+    font-size: 45px;
+
+    font-weight: bold;
+
+    color:
+        var(--azul);
+
+}
+
+
+.flecha-arriba {
+
+    margin-bottom: -10px;
+
+}
+
+
+.flecha-abajo {
+
+    margin-top: -10px;
+
+}
+
+
+/* =====================================================
+   DINÁMICA
+===================================================== */
+
+.pista-dinamica {
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+
+.auto {
+
+    position: absolute;
+
+    left: 20px;
+
+    bottom: 80px;
+
+    font-size: 75px;
+
+    transition:
+        transform 0.2s ease;
+
+}
+
+
+.pista-linea {
+
+    position: absolute;
+
+    left: 0;
+
+    right: 0;
+
+    bottom: 70px;
+
+    height: 5px;
+
+    background:
+        #94a3b8;
+
+}
+
+
+/* =====================================================
+   INERCIA
+===================================================== */
+
+.inercia-escena {
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 30px;
+
+}
+
+
+.objeto-inercia {
+
+    font-size: 70px;
+
+    transition:
+        transform 0.8s ease;
+
+}
+
+
+/* =====================================================
+   SEGUNDA LEY
+===================================================== */
+
+.pista-fuerza {
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 30px;
+
+}
+
+
+.objeto-fuerza {
+
+    font-size: 75px;
+
+    transition:
+        transform 0.4s ease;
+
+}
+
+
+/* =====================================================
+   TERCERA LEY
+===================================================== */
+
+.reaccion-escena {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-around;
+
+}
+
+
+.cuerpo {
+
+    font-size: 75px;
+
+    transition:
+        transform 0.6s ease;
+
+}
+
+
+.flecha-reaccion {
+
+    position: absolute;
+
+    font-size: 55px;
+
+    font-weight: bold;
+
+    color:
+        #dc2626;
+
+    opacity: 0;
+
+    transition:
+        opacity 0.3s;
+
+}
+
+
+.flecha1 {
+
+    left: 38%;
+
+}
+
+
+.flecha2 {
+
+    right: 38%;
+
+}
+
+
+/* =====================================================
+   BOTONES
+===================================================== */
+
+.boton-experimento {
+
+    border: none;
+
+    background:
+        var(--azul);
+
+    color: white;
+
+    padding:
+        14px 22px;
+
+    border-radius: 12px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s,
+        background 0.2s;
+
+}
+
+
+.boton-experimento:hover {
+
+    transform:
+        scale(1.04);
+
+    background:
+        #1d4ed8;
+
+}
+
+
+.mensaje-experimento {
+
+    margin-top: 20px;
+
+    padding: 15px;
+
+    background:
+        var(--fondo);
+
+    border-radius: 12px;
+
+    color:
+        var(--texto-secundario);
+
+}
+
+
+/* =====================================================
+   RECURSO EN INGLÉS
+===================================================== */
+
+.referencia {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #172554,
+            #1e3a8a
+        );
+
+    color: white;
+
+    padding: 45px;
+
+    border-radius: 28px;
+
+    margin-bottom: 75px;
+
+}
+
+
+.referencia-icono {
+
+    font-size: 65px;
+
+}
+
+
+.referencia-contenido > span {
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    font-weight: bold;
+
+    color:
+        #bfdbfe;
+
+}
+
+
+.referencia-contenido h2 {
+
+    font-size: 32px;
+
+    margin:
+        8px 0
+        12px;
+
+}
+
+
+.referencia-contenido p {
+
+    color:
+        #dbeafe;
+
+    line-height: 1.7;
+
+    font-size: 17px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.referencia-contenido a {
+
+    display: inline-block;
+
+    padding:
+        13px 20px;
+
+    background: white;
+
+    color:
+        #172554;
+
+    text-decoration: none;
+
+    border-radius: 10px;
+
+    font-weight: bold;
+
+}
+
+
+/* =====================================================
+   REFERENCIAS
+===================================================== */
+
+.bibliografia {
+
+    margin-bottom: 75px;
+
+}
+
+
+.referencias-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 25px;
+
+}
+
+
+.referencia-card {
+
+    background:
+        var(--tarjeta);
+
+    border:
+        1px solid var(--borde);
+
+    border-radius: 20px;
+
+    padding: 30px;
+
+    box-shadow:
+        var(--sombra);
+
+}
+
+
+.referencia-card > span {
+
+    font-size: 35px;
+
+}
+
+
+.referencia-card h3 {
+
+    margin:
+        12px 0;
+
+}
+
+
+.referencia-card p {
+
+    color:
+        var(--texto-secundario);
+
+    line-height: 1.7;
+
+    margin-bottom: 15px;
+
+}
+
+
+.referencia-card a {
+
+    color:
+        var(--azul);
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+
+    background:
+        #0f172a;
+
+    color:
+        #94a3b8;
+
+    padding:
+        35px
+        max(6%, calc((100% - 1200px) / 2));
+
+    display: flex;
+
+    justify-content: space-between;
+
+}
+
+
+footer strong {
+
+    color: white;
+
+}
+
+
+/* =====================================================
+   MODO OSCURO
+===================================================== */
+
+body.oscuro {
+
+    --fondo: #0f172a;
+
+    --tarjeta: #1e293b;
+
+    --texto: #f8fafc;
+
+    --texto-secundario: #cbd5e1;
+
+    --borde: #334155;
+
+}
+
+
+body.oscuro
+.imagen-contenedor {
+
+    background:
+        #1e293b;
+
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 950px) {
+
+
+    .mapa-contenedor {
+
+        height: auto;
+
+        padding: 25px;
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 18px;
+
+    }
+
+
+    .nodo {
+
+        position: relative;
+
+        width: 100%;
+
+        left: auto;
+
+        right: auto;
+
+        top: auto;
+
+        bottom: auto;
+
+        transform: none;
+
+    }
+
+
+    .nodo:hover {
+
+        transform:
+            scale(1.03);
+
+    }
+
+
+    .central,
+    .estatica,
+    .principios,
+    .principio2 {
+
+        transform: none;
+
+    }
+
+
+    .central:hover,
+    .estatica:hover,
+    .principios:hover,
+    .principio2:hover {
+
+        transform:
+            scale(1.03);
+
+    }
+
+
+    .central {
+
+        grid-column:
+            1 / -1;
+
+    }
+
+
+    .linea {
+
+        display: none;
+
+    }
+
+
+    .info-layout {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .experimento {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+
+    .encabezado {
+
+        padding:
+            40px 5%;
+
+    }
+
+
+    .encabezado h1 {
+
+        font-size: 40px;
+
+    }
+
+
+    .encabezado p {
+
+        font-size: 16px;
+
+    }
+
+
+    .mapa-contenedor {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .central {
+
+        grid-column:
+            auto;
+
+    }
+
+
+    .panel {
+
+        padding: 25px;
+
+    }
+
+
+    .info-header h2 {
+
+        font-size: 26px;
+
+    }
+
+
+    .info-texto {
+
+        font-size: 17px;
+
+    }
+
+
+    .experimento {
+
+        padding: 25px;
+
+    }
+
+
+    .referencia {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 30px;
+
+    }
+
+
+    .referencias-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    footer {
+
+        flex-direction: column;
+
+        gap: 15px;
+
+    }
+
+}

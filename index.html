@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Mapa interactivo sobre Estática, Dinámica y las Leyes de Newton"
+    >
+
+    <title>
+        Estática y Dinámica | Mapa Interactivo
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="estilos.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     ENCABEZADO
+===================================================== -->
+
+<header class="encabezado">
+
+    <div class="encabezado-contenido">
+
+        <span class="etiqueta">
+            FÍSICA • MECÁNICA
+        </span>
+
+        <h1>
+            Estática y Dinámica
+        </h1>
+
+        <p>
+            Mapa conceptual interactivo sobre los conceptos
+            fundamentales de la mecánica y las leyes de Newton.
+        </p>
+
+    </div>
+
+<!--
+    <button
+        id="modoBtn"
+        class="modo-btn"
+        title="Cambiar modo de color"
+    >
+        🌙
+    </button>-->
+
+</header>
+
+
+
+<main>
+
+
+<!-- =====================================================
+     01 — MAPA CONCEPTUAL
+===================================================== -->
+
+<section class="mapa">
+
+    <div class="titulo-seccion">
+
+        <span class="numero-seccion">
+            01
+        </span>
+
+        <div>
+
+            <h2>
+                Mapa conceptual
+            </h2>
+
+            <p>
+                Selecciona un concepto para conocer
+                su información y experimentar con él.
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="mapa-contenedor">
+
+
+        <!-- =================================================
+             LÍNEAS DEL MAPA
+        ================================================== -->
+
+        <div class="linea linea-estatica"></div>
+
+        <div class="linea linea-dinamica"></div>
+
+        <div class="linea linea-principios"></div>
+
+        <div class="linea linea-ley1"></div>
+
+        <div class="linea linea-ley2"></div>
+
+        <div class="linea linea-ley3"></div>
+
+
+
+        <!-- =================================================
+             MECÁNICA
+        ================================================== -->
+
+        <button
+            class="nodo central"
+            data-concepto="mecanica"
+        >
+
+            <span class="icono">
+                
+            </span>
+
+            <strong>
+                MECÁNICA
+            </strong>
+
+            <small>
+                Movimiento y equilibrio
+                de los cuerpos
+            </small>
+
+        </button>
+
+
+
+        <!-- =================================================
+             ESTÁTICA
+        ================================================== -->
+
+        <button
+            class="nodo estatica"
+            data-concepto="estatica"
+        >
+
+            <span class="icono">
+                
+            </span>
+
+            <strong>
+                ESTÁTICA
+            </strong>
+
+            <small>
+                Reposo y equilibrio
+            </small>
+
+        </button>
+
+
+
+        <!-- =================================================
+             DINÁMICA
+        ================================================== -->
+
+        <button
+            class="nodo dinamica"
+            data-concepto="dinamica"
+        >
+
+            <span class="icono">
+                
+            </span>
+
+            <strong>
+                DINÁMICA
+            </strong>
+
+            <small>
+                Movimiento y aceleración
+            </small>
+
+        </button>
+
+
+
+        <!-- =================================================
+             PRINCIPIOS
+        ================================================== -->
+
+        <button
+            class="nodo principios"
+            data-concepto="principios"
+        >
+
+            <span class="icono">
+                
+            </span>
+
+            <strong>
+                PRINCIPIOS
+            </strong>
+
+            <small>
+                Leyes de Newton
+            </small>
+
+        </button>
+
+
+
+        <!-- =================================================
+             PRIMERA LEY
+        ================================================== -->
+
+        <button
+            class="nodo principio1"
+            data-concepto="principio1"
+        >
+
+            <span class="numero">
+                1
+            </span>
+
+            <strong>
+                INERCIA
+            </strong>
+
+            <small>
+                Primera ley
+            </small>
+
+        </button>
+
+
+
+        <!-- =================================================
+             SEGUNDA LEY
+        ================================================== -->
+
+        <button
+            class="nodo principio2"
+            data-concepto="principio2"
+        >
+
+            <span class="numero">
+                2
+            </span>
+
+            <strong>
+                FUERZA
+            </strong>
+
+            <small>
+                F = ma
+            </small>
+
+        </button>
+
+
+
+        <!-- =================================================
+             TERCERA LEY
+        ================================================== -->
+
+        <button
+            class="nodo principio3"
+            data-concepto="principio3"
+        >
+
+            <span class="numero">
+                3
+            </span>
+
+            <strong>
+                ACCIÓN Y REACCIÓN
+            </strong>
+
+            <small>
+                Fuerzas opuestas
+            </small>
+
+        </button>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     INFORMACIÓN DEL CONCEPTO
+===================================================== -->
+
+<section class="informacion">
+
+    <div
+        id="panelInfo"
+        class="panel"
+    >
+
+        <div class="panel-inicial">
+
+            <div class="panel-icono">
+                
+            </div>
+
+            <h2>
+                Selecciona un concepto
+            </h2>
+
+            <p>
+                Haz clic en cualquier elemento del mapa
+                para visualizar su información.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     02 — EXPERIMENTO ESTÁTICA
+===================================================== -->
+
+<section
+    class="experiencia experimento-seccion"
+    id="experimento-estatica"
+>
+
+    <div class="titulo-seccion">
+
+        <span class="numero-seccion">
+            
+        </span>
+
+        <div>
+
+            <h2>
+                Experimenta con la Estática
+            </h2>
+
+            <p>
+                Observa cómo las fuerzas mantienen
+                un objeto en equilibrio.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="experimento">
+
+
+        <div class="experimento-info">
+
+            <h3>
+                 Equilibrio de fuerzas
+            </h3>
+
+            <p>
+                Modifica el peso del objeto y observa
+                cómo debe cambiar la fuerza de soporte
+                para mantenerlo en equilibrio.
+            </p>
+
+
+            <div class="control">
+
+                <div class="control-cabecera">
+
+                    <label>
+                        Peso del objeto
+                    </label>
+
+                    <strong>
+
+                        <span id="pesoValor">
+                            50
+                        </span>
+
+                        N
+
+                    </strong>
+
+                </div>
+
+
+                <input
+                    type="range"
+                    id="peso"
+                    min="10"
+                    max="100"
+                    value="50"
+                >
+
+            </div>
+
+
+            <div class="ecuacion">
+
+                ΣF = 0
+
+                <br>
+
+                ↑
+                <span id="normalValor">
+                    50
+                </span>
+                N
+
+                −
+
+                ↓
+                <span id="pesoEcuacion">
+                    50
+                </span>
+                N
+
+                = 0
+
+            </div>
+
+        </div>
+
+
+
+        <div class="escena equilibrio">
+
+            <div class="fuerza flecha-arriba">
+                ↑
+            </div>
+
+            <div
+                class="objeto-estatico"
+                id="objetoEstatico"
+            >
+                📦
+            </div>
+
+            <div class="mesa">
+            </div>
+
+            <div class="fuerza flecha-abajo">
+                ↓
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     03 — EXPERIMENTO DINÁMICA
+===================================================== -->
+
+<section
+    class="experiencia experimento-seccion"
+    id="experimento-dinamica"
+>
+
+    <div class="titulo-seccion">
+
+        <span class="numero-seccion">
+            
+        </span>
+
+        <div>
+
+            <h2>
+                Experimenta con la Dinámica
+            </h2>
+
+            <p>
+                Comprueba cómo una fuerza puede cambiar
+                el movimiento de un cuerpo.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="experimento">
+
+
+        <div class="experimento-info">
+
+            <h3>
+                Movimiento y aceleración
+            </h3>
+
+            <p>
+                Aumenta la fuerza aplicada al automóvil
+                y observa cómo aumenta su aceleración.
+            </p>
+
+
+            <div class="control">
+
+                <div class="control-cabecera">
+
+                    <label>
+                        Fuerza aplicada
+                    </label>
+
+                    <strong>
+
+                        <span id="fuerzaDinamicaValor">
+                            50
+                        </span>
+
+                        N
+
+                    </strong>
+
+                </div>
+
+
+                <input
+                    type="range"
+                    id="fuerzaDinamica"
+                    min="0"
+                    max="100"
+                    value="50"
+                >
+
+            </div>
+
+
+            <div class="resultado-simple">
+
+                Aceleración:
+
+                <strong>
+
+                    <span id="aceleracionDinamica">
+                        5.00
+                    </span>
+
+                    m/s²
+
+                </strong>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="escena pista-dinamica">
+
+            <div
+                class="auto"
+                id="auto"
+            >
+                🚗
+            </div>
+
+            <div class="pista-linea">
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     04 — EXPERIMENTO PRIMERA LEY
+===================================================== -->
+
+<section
+    class="experiencia experimento-seccion"
+    id="experimento-principio1"
+>
+
+    <div class="titulo-seccion">
+
+        <span class="numero-seccion">
+            
+        </span>
+
+        <div>
+
+            <h2>
+                Primera Ley — Inercia
+            </h2>
+
+            <p>
+                Experimenta con la tendencia de un cuerpo
+                a mantener su estado de movimiento.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="experimento">
+
+
+        <div class="experimento-info">
+
+            <h3>
+                 La inercia
+            </h3>
+
+            <p>
+                Presiona el botón para aplicar una fuerza
+                y observar qué ocurre con el objeto.
+            </p>
+
+
+            <button
+                class="boton-experimento"
+                id="botonInercia"
+            >
+                Aplicar fuerza
+            </button>
+
+
+            <div
+                class="mensaje-experimento"
+                id="mensajeInercia"
+            >
+                El objeto está en reposo.
+            </div>
+
+        </div>
+
+
+
+        <div class="escena inercia-escena">
+
+            <div
+                class="objeto-inercia"
+                id="objetoInercia"
+            >
+                🟫
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     05 — EXPERIMENTO SEGUNDA LEY
+===================================================== -->
+
+<section
+    class="experiencia experimento-seccion"
+    id="experimento-principio2"
+>
+
+    <div class="titulo-seccion">
+
+        <span class="numero-seccion">
+            
+        </span>
+
+        <div>
+
+            <h2>
+                Segunda Ley — Fuerza y aceleración
+            </h2>
+
+            <p>
+                Comprueba la relación entre fuerza,
+                masa y aceleración.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="experimento">
+
+
+        <div class="experimento-info">
+
+            <h3>
+                 F = ma
+            </h3>
+
+            <p>
+                Modifica la fuerza y la masa para observar
+                cómo cambia la aceleración.
+            </p>
+
+
+            <div class="control">
+
+                <div class="control-cabecera">
+
+                    <label>
+                        Fuerza
+                    </label>
+
+                    <strong>
+
+                        <span id="fuerzaValor">
+                            50
+                        </span>
+
+                        N
+
+                    </strong>
+
+                </div>
+
+
+                <input
+                    type="range"
+                    id="fuerza"
+                    min="0"
+                    max="100"
+                    value="50"
+                >
+
+            </div>
+
+
+            <div class="control">
+
+                <div class="control-cabecera">
+
+                    <label>
+                        Masa
+                    </label>
+
+                    <strong>
+
+                        <span id="masaValor">
+                            10
+                        </span>
+
+                        kg
+
+                    </strong>
+
+                </div>
+
+
+                <input
+                    type="range"
+                    id="masa"
+                    min="1"
+                    max="50"
+                    value="10"
+                >
+
+            </div>
+
+
+            <div class="resultado-simple">
+
+                Aceleración:
+
+                <strong>
+
+                    <span id="aceleracion">
+                        5.00
+                    </span>
+
+                    m/s²
+
+                </strong>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="escena pista-fuerza">
+
+            <div
+                class="objeto-fuerza"
+                id="objetoFuerza"
+            >
+                📦
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     06 — EXPERIMENTO TERCERA LEY
+===================================================== -->
+
+<section
+    class="experiencia experimento-seccion"
+    id="experimento-principio3"
+>
+
+    <div class="titulo-seccion">
+
+        <span class="numero-seccion">
+            
+        </span>
+
+        <div>
+
+            <h2>
+                Tercera Ley — Acción y reacción
+            </h2>
+
+            <p>
+                Observa cómo dos cuerpos ejercen fuerzas
+                iguales y opuestas.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="experimento">
+
+
+        <div class="experimento-info">
+
+            <h3>
+                 Acción y reacción
+            </h3>
+
+            <p>
+                Presiona el botón para simular la interacción
+                entre dos cuerpos.
+            </p>
+
+
+            <button
+                class="boton-experimento"
+                id="botonReaccion"
+            >
+                Aplicar acción
+            </button>
+
+
+            <div
+                class="ecuacion"
+                id="ecuacionReaccion"
+            >
+                F₁₂ = −F₂₁
+            </div>
+
+        </div>
+
+
+
+        <div class="escena reaccion-escena">
+
+            <div
+                class="cuerpo cuerpo-izquierdo"
+                id="cuerpoIzquierdo"
+            >
+                🧍
+            </div>
+
+            <div
+                class="cuerpo cuerpo-derecho"
+                id="cuerpoDerecho"
+            >
+                🧱
+            </div>
+
+            <div
+                class="flecha-reaccion flecha1"
+                id="flecha1"
+            >
+                →
+            </div>
+
+            <div
+                class="flecha-reaccion flecha2"
+                id="flecha2"
+            >
+                ←
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     RECURSO EN INGLÉS
+===================================================== -->
+
+<section class="referencia">
+
+    <div class="referencia-icono">
+        🇺🇸
+    </div>
+
+
+    <div class="referencia-contenido">
+
+        <span>
+            RECURSO EN INGLÉS
+        </span>
+
+        <h2>
+            Newton's Laws of Motion
+        </h2>
+
+        <p>
+            Recurso educativo en inglés sobre dinámica
+            y las leyes del movimiento de Newton.
+        </p>
+
+
+        <a
+            href="https://openstax.org/books/college-physics-2e/pages/4-introduction-to-dynamics-newtons-laws-of-motion"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            🇺🇸 Ver recurso en inglés →
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     07 — REFERENCIAS
+===================================================== -->
+
+<section class="bibliografia">
+
+    <div class="titulo-seccion">
+
+        <span class="numero-seccion">
+            
+        </span>
+
+        <div>
+
+            <h2>
+                Referencias
+            </h2>
+
+            <p>
+                Fuentes utilizadas para elaborar
+                el contenido.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="referencias-grid">
+
+
+        <article class="referencia-card">
+
+            <span>
+                
+            </span>
+
+            <h3>
+                Estática en Física: Equilibrio y Fundamentos
+            </h3>
+
+            <p>
+                Enfisica.com
+            </p>
+
+            <a
+                href="https://enfisica.com/estatica/estatica-en-fisica-equilibrio-y-fundamentos/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Consultar fuente
+            </a>
+
+        </article>
+
+
+        <article class="referencia-card">
+
+            <span>
+                
+            </span>
+
+            <h3>
+                Clase digital 2. Estática: conceptos fundamentales
+            </h3>
+
+            <p>
+                Universidad de Guanajuato
+            </p>
+
+            <a
+                href="https://blogs.ugto.mx/rea/clase-digital-2-estatica-conceptos-fundamentales/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Consultar fuente
+            </a>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div>
+
+        <strong>
+            Física
+        </strong>
+
+        <p>
+            Docente: DRA. BRIANDA SUSANA VELÁZQUEZ DE LUCIO
+        </p>
+
+    </div>
+
+
+    <div>
+
+        <p>
+            Team: Bandidos II
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
